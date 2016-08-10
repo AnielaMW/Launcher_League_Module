@@ -57,4 +57,7 @@ class Detective
   def psychic?
     @super_hero.psychic?
   end
+
+  private
+  attr_reader :secret_identity
 end
