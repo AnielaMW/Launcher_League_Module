@@ -6,15 +6,19 @@ class WaterBased
   def initialize(public_identity, secret_identity)
     @public_identity = public_identity
     @secret_identity = secret_identity
-    SuperHero.new
+    @super_hero = SuperHero.new
+  end
+
+  def species
+    @super_hero.species
   end
 
   def home
-    "#{super}'s Oceans"
+    "#{@super_hero.home}'s Oceans"
   end
 
   def fans_per_thousand
-    super/100
+    @super_hero.fans_per_thousand/100
   end
 
   def powers
@@ -52,7 +56,18 @@ class WaterBased
     "ended the loneliness she has felt through so much loss."
   end
 
+  def speed_in_mph
+    @super_hero.speed_in_mph
+  end
+
+  def health
+   @super_hero.health
+  end
+
   def psychic?
     true
   end
+
+  private
+  attr_reader :secret_identity
 end
