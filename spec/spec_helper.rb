@@ -1,3 +1,3 @@
 require 'pry'
 
-require_relative '../code.rb'
+require_relative '../lib/code.rb'

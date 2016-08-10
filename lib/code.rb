@@ -1,0 +1,7 @@
+require_relative 'super_hero.rb'
+require_relative 'brawler.rb'
+require_relative 'demigod.rb'
+require_relative 'detective.rb'
+require_relative 'jack_o_trades.rb'
+require_relative 'speedster.rb'
+require_relative 'waterbased.rb'
