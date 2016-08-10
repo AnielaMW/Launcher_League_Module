@@ -6,7 +6,19 @@ class Speedster
   def initialize(public_identity, secret_identity)
     @public_identity = public_identity
     @secret_identity = secret_identity
-    SuperHero.new
+    @super_hero = SuperHero.new
+  end
+
+  def species
+    @super_hero.species
+  end
+
+  def home
+    @super_hero.home
+  end
+
+  def fans_per_thousand
+    @super_hero.fans_per_thousand
   end
 
   def powers
@@ -36,6 +48,17 @@ class Speedster
   end
 
   def speed_in_mph
-    super * 1000
+    @super_hero.speed_in_mph * 1000
   end
+
+  def health
+    @super_hero.health
+  end
+
+  def psychic?
+    @super_hero.psychic?
+  end
+
+  private
+  attr_reader :secret_identity
 end
