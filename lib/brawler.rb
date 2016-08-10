@@ -50,16 +50,12 @@ class Brawler
     "and invited to use his strength for something positive."
   end
 
-  def health
-    @super_hero.health * 20
-  end
-
   def speed_in_mph
     @super_hero.speed_in_mph
   end
 
   def health
-    @super_hero.health
+    @super_hero.health * 20
   end
 
   def psychic?
