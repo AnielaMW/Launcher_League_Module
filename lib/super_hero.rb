@@ -35,7 +35,4 @@ class SuperHero
   def psychic?
     false
   end
-
-  private
-  attr_reader :secret_identity
 end
