@@ -1,4 +1,4 @@
-class SuperHero
+module SuperHero
 
   def species
     "Human"
@@ -10,18 +10,6 @@ class SuperHero
 
   def fans_per_thousand
     500
-  end
-
-  def powers
-    ""
-  end
-
-  def weakness
-    ""
-  end
-
-  def backstory
-    ""
   end
 
   def speed_in_mph

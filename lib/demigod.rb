@@ -3,22 +3,15 @@ require_relative 'super_hero.rb'
 class Demigod
   attr_reader :public_identity
 
+  include SuperHero
+
   def initialize(public_identity, secret_identity)
     @public_identity = public_identity
     @secret_identity = secret_identity
-    @super_hero = SuperHero.new
-  end
-
-  def species
-    @super_hero.species
   end
 
   def home
     "Cosmic Plane"
-  end
-
-  def fans_per_thousand
-    @super_hero.fans_per_thousand
   end
 
   def powers
@@ -41,18 +34,6 @@ class Demigod
     "others as much as they will allow him and has an over " +
     "developed sense of superiority. He still has not received " +
     "forgiveness from the ElderGods."
-  end
-
-  def speed_in_mph
-    @super_hero.speed_in_mph
-  end
-
-  def health
-    @super_hero.health
-  end
-
-  def psychic?
-    @super_hero.psychic?
   end
 
   private

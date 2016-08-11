@@ -3,22 +3,19 @@ require_relative 'super_hero.rb'
 class WaterBased
   attr_reader :public_identity
 
+  include SuperHero
+
   def initialize(public_identity, secret_identity)
     @public_identity = public_identity
     @secret_identity = secret_identity
-    @super_hero = SuperHero.new
-  end
-
-  def species
-    @super_hero.species
   end
 
   def home
-    "#{@super_hero.home}'s Oceans"
+    "Earth's Oceans"
   end
 
   def fans_per_thousand
-    @super_hero.fans_per_thousand/100
+    5
   end
 
   def powers
@@ -54,14 +51,6 @@ class WaterBased
     "the Metropolitan Aquarium as the night curator. Joining the " +
     "Launcher League allowed her to be herself with someone and " +
     "ended the loneliness she has felt through so much loss."
-  end
-
-  def speed_in_mph
-    @super_hero.speed_in_mph
-  end
-
-  def health
-   @super_hero.health
   end
 
   def psychic?

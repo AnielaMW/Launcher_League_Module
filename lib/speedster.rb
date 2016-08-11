@@ -3,22 +3,11 @@ require_relative 'super_hero.rb'
 class Speedster
   attr_reader :public_identity
 
+  include SuperHero
+
   def initialize(public_identity, secret_identity)
     @public_identity = public_identity
     @secret_identity = secret_identity
-    @super_hero = SuperHero.new
-  end
-
-  def species
-    @super_hero.species
-  end
-
-  def home
-    @super_hero.home
-  end
-
-  def fans_per_thousand
-    @super_hero.fans_per_thousand
   end
 
   def powers
@@ -48,15 +37,7 @@ class Speedster
   end
 
   def speed_in_mph
-    @super_hero.speed_in_mph * 1000
-  end
-
-  def health
-    @super_hero.health
-  end
-
-  def psychic?
-    @super_hero.psychic?
+    60000
   end
 
   private

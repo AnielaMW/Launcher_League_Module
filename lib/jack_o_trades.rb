@@ -3,10 +3,11 @@ require_relative 'super_hero.rb'
 class JackOfAllTrades
   attr_reader :public_identity
 
+  include SuperHero
+
   def initialize(public_identity, secret_identity)
     @public_identity = public_identity
     @secret_identity = secret_identity
-    @super_hero = SuperHero.new
   end
 
   def species
@@ -15,10 +16,6 @@ class JackOfAllTrades
 
   def home
     "Venus"
-  end
-
-  def fans_per_thousand
-   @super_hero.fans_per_thousand
   end
 
   def powers
@@ -42,14 +39,6 @@ class JackOfAllTrades
     "progress slowly #{@secret_identity} uses her alien abilities " +
     "and tech to maintain peace and prosperity on Earth until she " +
     "can return to #{home}."
-  end
-
-  def speed_in_mph
-    @super_hero.speed_in_mph
-  end
-
-  def health
-    @super_hero.health
   end
 
   def psychic?
